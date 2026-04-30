@@ -13,7 +13,7 @@ steps {
 // clean the directory
 sh "rm -rf *"
 // Checkout the Git repository
-sh "git clone https://github.com/Lagro222/TpJavaPipeLine-Benkhaira_Oualid"
+sh "git clone https://github.com/Lagro222/TPJavaPipeLine-Benkhaira_Oualid.git"
 }
 }
 stage('Build') {
@@ -23,7 +23,7 @@ script {
 def currentDir = pwd()
 echo "Current directory: ${currentDir}"
 // Navigate to the directory containing the Maven project
-dir('java-maven-ensi/mave') {
+dir('TPJavaPipeLine-Benkhaira_Oualid/java-maven-ensi/maven') {
 // Run Maven commands
 sh 'mvn clean test package'
 sh "java -jar target/maven-0.0.1-SNAPSHOT.jar"
